@@ -1,0 +1,21 @@
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\bin\Debug\delegates.exe.config
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\bin\Debug\delegates.exe
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\bin\Debug\delegates.pdb
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\obj\Debug\delegates.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\obj\Debug\delegates.Form1.resources
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\obj\Debug\delegates.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\obj\Debug\delegates.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\obj\Debug\delegates.exe
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\obj\Debug\delegates.pdb
+c:\users\admin\documents\visual studio 2015\Projects\delegates\delegates\obj\Debug\delegates.UserControls.ControlSamochod.resources
+C:\Users\Damian\source\repos\delegates\delegates\obj\Debug\delegates.csprojResolveAssemblyReference.cache
+C:\Users\Damian\source\repos\delegates\delegates\obj\Debug\projektSamochody.Form1.resources
+C:\Users\Damian\source\repos\delegates\delegates\obj\Debug\projektSamochody.Properties.Resources.resources
+C:\Users\Damian\source\repos\delegates\delegates\obj\Debug\projektSamochody.UserControls.ControlSamochod.resources
+C:\Users\Damian\source\repos\delegates\delegates\obj\Debug\delegates.csproj.GenerateResource.Cache
+C:\Users\Damian\source\repos\delegates\delegates\obj\Debug\delegates.csproj.CoreCompileInputs.cache
+C:\Users\Damian\source\repos\delegates\delegates\bin\Debug\projektSamochody.exe.config
+C:\Users\Damian\source\repos\delegates\delegates\bin\Debug\projektSamochody.exe
+C:\Users\Damian\source\repos\delegates\delegates\bin\Debug\projektSamochody.pdb
+C:\Users\Damian\source\repos\delegates\delegates\obj\Debug\projektSamochody.exe
+C:\Users\Damian\source\repos\delegates\delegates\obj\Debug\projektSamochody.pdb
