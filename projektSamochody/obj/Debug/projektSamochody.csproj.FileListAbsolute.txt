@@ -1,0 +1,11 @@
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\bin\Debug\projektSamochody.exe.config
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\bin\Debug\projektSamochody.exe
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\bin\Debug\projektSamochody.pdb
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.csprojResolveAssemblyReference.cache
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Form1.resources
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Properties.Resources.resources
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.UserControls.ControlSamochod.resources
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.csproj.GenerateResource.Cache
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.csproj.CoreCompileInputs.cache
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.exe
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.pdb

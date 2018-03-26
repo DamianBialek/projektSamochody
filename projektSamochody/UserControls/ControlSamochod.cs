@@ -32,23 +32,19 @@ namespace projektSamochody.UserControls
             this.silnikCheckbox.Checked = (samochodObject.pobierzStanSilnika());
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void silnikButton_Click(object sender, EventArgs e)
         {
             if (!this.silnikCheckbox.Checked)
             {
-                this.silnikCheckbox.Checked = true;
+                this.samochodObject.wlaczSilnik();
                 this.silnikButton.Text = "Zgaś silnik";
             }
             else
             {
-                this.silnikCheckbox.Checked = false;
+                this.samochodObject.wylaczSilnik();
                 this.silnikButton.Text = "Uruchom silnik";
             }
+            this.silnikCheckbox.Checked = this.samochodObject.pobierzStanSilnika();
         }
 
         private void zwiekszPredkoscButton_Click(object sender, EventArgs e)
