@@ -14,6 +14,10 @@ namespace projektSamochody
 {
     public partial class Form1 : Form
     {
+        ThreadForm form;
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +29,7 @@ namespace projektSamochody
 
         public void utworzNowySamochod()
         {
-            Samochod nowySamochod = new Samochod("Audi","A6",2004,0,10,false,70,7,200);
+            Samochod nowySamochod = new Samochod("Audi","A6",2004,0,10,false,70,7,50);
 
             ControlSamochod kontrolkaSamochodu = new ControlSamochod(nowySamochod);
             kontrolkaSamochodu.Name = "ControlSamochod" + this.samochody.Controls.Count;
@@ -68,6 +72,18 @@ namespace projektSamochody
             }
 
             this.samochody.Controls.Remove(buttonClicked);
+        }
+
+        private void threadButton(object sender, EventArgs e)
+        {
+            form = new ThreadForm();
+            form.delMetoda += this.przypiszTextBox;
+            form.ShowDialog();
+        }
+
+        private void przypiszTextBox(int i)
+        {
+            //this.textBox1.Text = i.ToString();
         }
     }
 }

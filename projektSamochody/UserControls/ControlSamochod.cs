@@ -8,12 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using projektSamochody.Classes;
+using System.Threading;
 
 namespace projektSamochody.UserControls
 {
     public partial class ControlSamochod : UserControl
     {
-       Samochod samochodObject;
+        Samochod samochodObject;
+
+        public delegate void delAktualizacjaPredkosci();
+        delAktualizacjaPredkosci metAktualizacjaPredkosci;
+        delAktualizacjaPredkosci metAktualizacjaPrzyciskow;
+
+
         public ControlSamochod(Samochod samochodObject)
         {
             InitializeComponent();
@@ -30,6 +37,9 @@ namespace projektSamochody.UserControls
             this.predkoscLabel.Text = samochodObject.pobierzPredkosc().ToString();
 
             this.silnikCheckbox.Checked = (samochodObject.pobierzStanSilnika());
+
+            metAktualizacjaPredkosci += this.aktualizujPoleZPredkoscia;
+            metAktualizacjaPrzyciskow += this.aktualizujStanPrzyciskow;
         }
 
         private void silnikButton_Click(object sender, EventArgs e)
@@ -55,11 +65,39 @@ namespace projektSamochody.UserControls
                 if (int.TryParse(oIlePredkoscTextBox.Text, out oIle))
                 {
                     if (this.samochodObject.przyspiesz(oIle))
-                        this.predkoscLabel.Text = this.samochodObject.pobierzPredkosc().ToString() + " km/h";
-                    //else
-                    //    MessageBox.Show("Samochód osiągnął już swoją prędkość maksymalną");
+                    {
+                        this.aktualizujStanPrzyciskow();
+                        Thread watekAktualizujPredkosc = new Thread(aktualizujPredkosc);
+                        watekAktualizujPredkosc.Start();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Samochód osiągnał już swoją prędkość maksymalną");
+                    }
                 }
             }
+        }
+
+        private void aktualizujStanPrzyciskow()
+        {
+            this.zwiekszPredkoscButton.Enabled = !this.zwiekszPredkoscButton.Enabled;
+            this.zmniejszPredkoscButton.Enabled = !this.zmniejszPredkoscButton.Enabled;
+        }
+
+        private void aktualizujPredkosc()
+        {
+            while (!this.samochodObject.pobierzStanOperacji())
+            {
+                this.Invoke(metAktualizacjaPredkosci);
+                Thread.Sleep(500);
+            }
+
+            this.Invoke(metAktualizacjaPrzyciskow);
+        }
+
+        private void aktualizujPoleZPredkoscia()
+        {
+            this.predkoscLabel.Text = this.samochodObject.pobierzPredkosc().ToString() + " km/h";
         }
 
         private void zmniejszPredkoscButton_Click(object sender, EventArgs e)
@@ -70,9 +108,13 @@ namespace projektSamochody.UserControls
                 if (int.TryParse(oIlePredkoscTextBox.Text, out oIle))
                 {
                     if (this.samochodObject.zwolnij(oIle))
-                        this.predkoscLabel.Text = this.samochodObject.pobierzPredkosc().ToString()+" km/h";
-                    //else
-                    //    MessageBox.Show("Samochód już bardziej zwolnić nie może");
+                    {
+                        this.aktualizujStanPrzyciskow();
+                        Thread watekAktualizujPredkosc = new Thread(aktualizujPredkosc);
+                        watekAktualizujPredkosc.Start();
+                    }
+                    else
+                        MessageBox.Show("Samochód już bardziej zwolnić nie może");
                 }
             }
         }
