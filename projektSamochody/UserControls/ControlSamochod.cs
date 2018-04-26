@@ -51,6 +51,12 @@ namespace projektSamochody.UserControls
             }
             else
             {
+                if(this.samochodObject.pobierzPredkosc() != 0)
+                {
+                    MessageBox.Show("Musisz najpierw się zatrzymać aby zgasić silnik");
+                    return;
+                }
+
                 this.samochodObject.wylaczSilnik();
                 this.silnikButton.Text = "Uruchom silnik";
             }
@@ -60,6 +66,13 @@ namespace projektSamochody.UserControls
         private void zwiekszPredkoscButton_Click(object sender, EventArgs e)
         {
             int oIle;
+
+            if (!this.samochodObject.pobierzStanSilnika())
+            {
+                MessageBox.Show("Musisz najpierw odpalić silnik aby ruszyć");
+                return;
+            }
+
             if (oIlePredkoscTextBox.Text != String.Empty)
             {
                 if (int.TryParse(oIlePredkoscTextBox.Text, out oIle))
@@ -103,6 +116,13 @@ namespace projektSamochody.UserControls
         private void zmniejszPredkoscButton_Click(object sender, EventArgs e)
         {
             int oIle;
+
+            if (!this.samochodObject.pobierzStanSilnika())
+            {
+                MessageBox.Show("Musisz najpierw odpalić silnik aby ruszyć");
+                return;
+            }
+
             if (oIlePredkoscTextBox.Text != String.Empty)
             {
                 if (int.TryParse(oIlePredkoscTextBox.Text, out oIle))
