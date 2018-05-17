@@ -33,3 +33,5 @@ C:\Users\Damian\source\repos\projektSamochody-master\projektSamochody\obj\Debug\
 C:\Users\Damian\source\repos\projektSamochody-master\projektSamochody\obj\Debug\projektSamochody.exe
 C:\Users\Damian\source\repos\projektSamochody-master\projektSamochody\obj\Debug\projektSamochody.pdb
 C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.ThreadForm.resources
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Forms.NowySamochod.resources
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Forms.MenuForm.resources

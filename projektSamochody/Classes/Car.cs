@@ -10,17 +10,29 @@ namespace projektSamochody.Classes
 {
     public class Samochod
     {
-        string marka;
-        string model;
-        int rocznik;
-        int predkosc;
-        float iloscPaliwaWBaku;
-        float pojemnoscBaku;
-        float srednieSpalanie;
-        bool silnikWlaczony;
-        int predkoscMaksymalna;
+        //string marka;
+        //string model;
+        //int rocznik;
+        //int predkosc;
+        //float iloscPaliwaWBaku;
+        //float pojemnoscBaku;
+        //float srednieSpalanie;
+        //bool silnikWlaczony;
+        //int predkoscMaksymalna;
 
         bool koniecOperacji = true;
+
+        public string marka{ get; set; }
+        public string model{ get; set; }
+        public int rocznik{ get; set; }
+        public int predkosc{ get; set; }
+        public float iloscPaliwaWBaku { get; set; }
+        public float pojemnoscBaku { get; set; }
+        public float srednieSpalanie { get; set; }
+        public bool silnikWlaczony { get; set; }
+        public int predkoscMaksymalna { get; set; }
+
+        public Samochod() { }
 
         public Samochod(string marka, string model, int rocznik, int predkosc, float iloscPaliwa, bool silnikWlaczony, float pojemnoscBaku, float srednieSpalanie, int predkoscMaksymalna)
         {

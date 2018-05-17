@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using projektSamochody.Classes;
 using projektSamochody.UserControls;
+using projektSamochody.Forms;
 
 namespace projektSamochody
 {
@@ -16,7 +17,7 @@ namespace projektSamochody
     {
         ThreadForm form;
 
-
+        List<Samochod> listaSamochodow = new List<Samochod>();
 
         public Form1()
         {
@@ -24,12 +25,51 @@ namespace projektSamochody
 
             this.samochody.SetAutoScrollMargin(20,20);
 
-            utworzNowySamochod();
+            MenuForm startMenu = new MenuForm();
+            startMenu.ShowDialog();
+
+            if(startMenu.DialogResult != DialogResult.OK)
+                Environment.Exit(0);
+
+            try
+            {
+                string akcja = startMenu.pobierzAkcje();
+
+                switch (akcja)
+                {
+                    case "readJson":
+                        listaSamochodow = JsonFile.readJsonFile();
+                        this.zaladujListeSamochodow();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Błąd aplikacji !");
+                Environment.Exit(0);
+            }
         }
 
-        public void utworzNowySamochod()
+        public void zaladujListeSamochodow()
+        {
+            foreach (Samochod samochod in listaSamochodow)
+            {
+                this.dodajSamochod(samochod, false);
+            }
+        }
+
+        public void utworzNowyTestowySamochod()
         {
             Samochod nowySamochod = new Samochod("Audi","A6",2004,0,10,false,70,7,50);
+            this.dodajSamochod(nowySamochod);
+        }
+
+        public void dodajSamochod(Samochod nowySamochod, bool dodajDoListy = true)
+        {
+            if(dodajDoListy)
+                listaSamochodow.Add(nowySamochod);
 
             ControlSamochod kontrolkaSamochodu = new ControlSamochod(nowySamochod);
             kontrolkaSamochodu.Name = "ControlSamochod" + this.samochody.Controls.Count;
@@ -43,7 +83,14 @@ namespace projektSamochody
 
         private void button1_Click(object sender, EventArgs e)
         {
-            utworzNowySamochod();
+            NowySamochod nowySamochodForm = new NowySamochod();
+            DialogResult result = nowySamochodForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                Samochod nowySamochod = nowySamochodForm.nowySamochod;
+                this.dodajSamochod(nowySamochod);
+            }
         }
 
         private Button utworzNowyPrzyciskDoUsunieciaSamochodu(string kotrolkaSamochoduName)
@@ -68,9 +115,13 @@ namespace projektSamochody
             if (znalezioneSamochodyDoUsuniecia.Length > 0)
             {
                 ControlSamochod samochodDoUsunieciaKontrolka = znalezioneSamochodyDoUsuniecia[0] as ControlSamochod;
+                Samochod samochodDoUsunieciaObiekt = samochodDoUsunieciaKontrolka.pobierzObiektSamochodu();
+
+                this.listaSamochodow.Remove(samochodDoUsunieciaObiekt);
                 this.samochody.Controls.Remove(samochodDoUsunieciaKontrolka);
             }
 
+            
             this.samochody.Controls.Remove(buttonClicked);
         }
 
@@ -84,6 +135,21 @@ namespace projektSamochody
         private void przypiszTextBox(int i)
         {
             //this.textBox1.Text = i.ToString();
+        }
+
+        private void saveToJson_Click(object sender, EventArgs e)
+        {
+            JsonFile.writeToFile(listaSamochodow);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void utworzTestowySamochodButton_Click(object sender, EventArgs e)
+        {
+            this.utworzNowyTestowySamochod();
         }
     }
 }

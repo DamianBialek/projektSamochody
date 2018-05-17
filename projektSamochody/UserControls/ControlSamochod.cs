@@ -138,5 +138,10 @@ namespace projektSamochody.UserControls
                 }
             }
         }
+
+        public Samochod pobierzObiektSamochodu()
+        {
+            return this.samochodObject;
+        }
     }
 }

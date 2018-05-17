@@ -30,6 +30,8 @@
         {
             this.samochody = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
+            this.saveToJson = new System.Windows.Forms.Button();
+            this.utworzTestowySamochodButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // samochody
@@ -51,16 +53,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // saveToJson
+            // 
+            this.saveToJson.Location = new System.Drawing.Point(1148, 71);
+            this.saveToJson.Name = "saveToJson";
+            this.saveToJson.Size = new System.Drawing.Size(131, 53);
+            this.saveToJson.TabIndex = 4;
+            this.saveToJson.Text = "Zapisz samochody do pliku w formacie JSON";
+            this.saveToJson.UseVisualStyleBackColor = true;
+            this.saveToJson.Click += new System.EventHandler(this.saveToJson_Click);
+            // 
+            // utworzTestowySamochodButton
+            // 
+            this.utworzTestowySamochodButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.utworzTestowySamochodButton.Location = new System.Drawing.Point(1114, 472);
+            this.utworzTestowySamochodButton.Name = "utworzTestowySamochodButton";
+            this.utworzTestowySamochodButton.Size = new System.Drawing.Size(185, 39);
+            this.utworzTestowySamochodButton.TabIndex = 5;
+            this.utworzTestowySamochodButton.Text = "Utworz testowy samochod";
+            this.utworzTestowySamochodButton.UseVisualStyleBackColor = true;
+            this.utworzTestowySamochodButton.Click += new System.EventHandler(this.utworzTestowySamochodButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1322, 636);
+            this.Controls.Add(this.utworzTestowySamochodButton);
+            this.Controls.Add(this.saveToJson);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.samochody);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,6 +95,8 @@
         #endregion
         private System.Windows.Forms.FlowLayoutPanel samochody;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button saveToJson;
+        private System.Windows.Forms.Button utworzTestowySamochodButton;
     }
 }
 
