@@ -37,5 +37,12 @@ namespace projektSamochody.Forms
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void wczytajXmlButton_Click(object sender, EventArgs e)
+        {
+            this.akcja = "readXml";
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

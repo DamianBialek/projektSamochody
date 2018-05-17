@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Reflection;
+using System.Xml;
+using System.Xml.Serialization;
+using projektSamochody.Classes;
 
 namespace projektSamochody.Classes
 {
@@ -207,3 +210,4 @@ namespace projektSamochody.Classes
         }
     }
 }
+

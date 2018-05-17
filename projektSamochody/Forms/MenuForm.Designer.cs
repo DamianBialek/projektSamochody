@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.wczytajJsonButton = new System.Windows.Forms.Button();
             this.nowyProjektButton = new System.Windows.Forms.Button();
+            this.wczytajXmlButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,11 +78,23 @@
             this.nowyProjektButton.UseVisualStyleBackColor = true;
             this.nowyProjektButton.Click += new System.EventHandler(this.nowyProjektButton_Click);
             // 
+            // wczytajXmlButton
+            // 
+            this.wczytajXmlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wczytajXmlButton.Location = new System.Drawing.Point(110, 245);
+            this.wczytajXmlButton.Name = "wczytajXmlButton";
+            this.wczytajXmlButton.Size = new System.Drawing.Size(187, 51);
+            this.wczytajXmlButton.TabIndex = 4;
+            this.wczytajXmlButton.Text = "Wczytaj samochody z pliku w formacie XML";
+            this.wczytajXmlButton.UseVisualStyleBackColor = true;
+            this.wczytajXmlButton.Click += new System.EventHandler(this.wczytajXmlButton_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 347);
+            this.Controls.Add(this.wczytajXmlButton);
             this.Controls.Add(this.nowyProjektButton);
             this.Controls.Add(this.wczytajJsonButton);
             this.Controls.Add(this.label2);
@@ -100,5 +113,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button wczytajJsonButton;
         private System.Windows.Forms.Button nowyProjektButton;
+        private System.Windows.Forms.Button wczytajXmlButton;
     }
 }

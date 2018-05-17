@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.saveToJson = new System.Windows.Forms.Button();
             this.utworzTestowySamochodButton = new System.Windows.Forms.Button();
+            this.saveToXml = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // samochody
@@ -74,12 +75,23 @@
             this.utworzTestowySamochodButton.UseVisualStyleBackColor = true;
             this.utworzTestowySamochodButton.Click += new System.EventHandler(this.utworzTestowySamochodButton_Click);
             // 
+            // saveToXml
+            // 
+            this.saveToXml.Location = new System.Drawing.Point(1148, 148);
+            this.saveToXml.Name = "saveToXml";
+            this.saveToXml.Size = new System.Drawing.Size(131, 53);
+            this.saveToXml.TabIndex = 6;
+            this.saveToXml.Text = "Zapisz samochody do pliku w formacie XML";
+            this.saveToXml.UseVisualStyleBackColor = true;
+            this.saveToXml.Click += new System.EventHandler(this.saveToXml_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1322, 636);
+            this.Controls.Add(this.saveToXml);
             this.Controls.Add(this.utworzTestowySamochodButton);
             this.Controls.Add(this.saveToJson);
             this.Controls.Add(this.button1);
@@ -97,6 +109,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button saveToJson;
         private System.Windows.Forms.Button utworzTestowySamochodButton;
+        private System.Windows.Forms.Button saveToXml;
     }
 }
 

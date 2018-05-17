@@ -41,12 +41,17 @@ namespace projektSamochody
                         listaSamochodow = JsonFile.readJsonFile();
                         this.zaladujListeSamochodow();
                         break;
+                    case "readXml":
+                        listaSamochodow = XmlCarFile.readFile();
+                        this.zaladujListeSamochodow();
+                        break;
                     default:
                         break;
                 }
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 MessageBox.Show(ex.Message, "Błąd aplikacji !");
                 Environment.Exit(0);
             }
@@ -150,6 +155,11 @@ namespace projektSamochody
         private void utworzTestowySamochodButton_Click(object sender, EventArgs e)
         {
             this.utworzNowyTestowySamochod();
+        }
+
+        private void saveToXml_Click(object sender, EventArgs e)
+        {
+            XmlCarFile.saveToFile(listaSamochodow);
         }
     }
 }
