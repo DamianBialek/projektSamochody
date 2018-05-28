@@ -35,7 +35,7 @@ namespace projektSamochody.Classes
             {
                 conn.Open();
 
-                SqlCommand deleteAllCommand = new SqlCommand("DROP TABLE "+nazwaTabeli, conn);
+                SqlCommand deleteAllCommand = new SqlCommand("DELETE FROM " + nazwaTabeli, conn);
                 deleteAllCommand.ExecuteNonQuery();
 
 

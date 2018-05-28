@@ -99,7 +99,7 @@ namespace projektSamochody
 
         public void utworzNowyTestowySamochod()
         {
-            Samochod nowySamochod = new Samochod("Audi","A6",2004,0,10,false,70,7,50);
+            Samochod nowySamochod = new Samochod("Audi","A6",2004,0,10,false,70,float.Parse("7,5"),50);
             this.dodajSamochod(nowySamochod);
         }
 
