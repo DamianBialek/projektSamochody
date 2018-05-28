@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Car.cs" />
+    <Compile Include="Classes\DB.cs" />
     <Compile Include="Classes\JsonFile.cs" />
     <Compile Include="Classes\XmlCarFile.cs" />
     <Compile Include="Form1.cs">

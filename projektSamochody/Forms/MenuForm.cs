@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using projektSamochody.Classes;
 
 namespace projektSamochody.Forms
 {
@@ -41,6 +42,18 @@ namespace projektSamochody.Forms
         private void wczytajXmlButton_Click(object sender, EventArgs e)
         {
             this.akcja = "readXml";
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            JsonFile.pobierzSciezkeDoPliku("write");
+        }
+
+        private void wczytajBazaButton_Click(object sender, EventArgs e)
+        {
+            this.akcja = "readDatabase";
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

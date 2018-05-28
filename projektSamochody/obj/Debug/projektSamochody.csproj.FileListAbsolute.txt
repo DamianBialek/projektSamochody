@@ -35,3 +35,16 @@ C:\Users\Damian\source\repos\projektSamochody-master\projektSamochody\obj\Debug\
 C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.ThreadForm.resources
 C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Forms.NowySamochod.resources
 C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Forms.MenuForm.resources
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\bin\Debug\projektSamochody.exe.config
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.exe
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.pdb
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\bin\Debug\projektSamochody.exe
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\bin\Debug\projektSamochody.pdb
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Form1.resources
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Forms.MenuForm.resources
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Forms.NowySamochod.resources
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Properties.Resources.resources
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.ThreadForm.resources
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.UserControls.ControlSamochod.resources
+C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.csproj.GenerateResource.Cache

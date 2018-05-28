@@ -33,6 +33,7 @@
             this.saveToJson = new System.Windows.Forms.Button();
             this.utworzTestowySamochodButton = new System.Windows.Forms.Button();
             this.saveToXml = new System.Windows.Forms.Button();
+            this.saveToDb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // samochody
@@ -85,12 +86,23 @@
             this.saveToXml.UseVisualStyleBackColor = true;
             this.saveToXml.Click += new System.EventHandler(this.saveToXml_Click);
             // 
+            // saveToDb
+            // 
+            this.saveToDb.Location = new System.Drawing.Point(1148, 236);
+            this.saveToDb.Name = "saveToDb";
+            this.saveToDb.Size = new System.Drawing.Size(131, 53);
+            this.saveToDb.TabIndex = 7;
+            this.saveToDb.Text = "Zapisz samochody do bazy danych";
+            this.saveToDb.UseVisualStyleBackColor = true;
+            this.saveToDb.Click += new System.EventHandler(this.saveToDb_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1322, 636);
+            this.Controls.Add(this.saveToDb);
             this.Controls.Add(this.saveToXml);
             this.Controls.Add(this.utworzTestowySamochodButton);
             this.Controls.Add(this.saveToJson);
@@ -110,6 +122,7 @@
         private System.Windows.Forms.Button saveToJson;
         private System.Windows.Forms.Button utworzTestowySamochodButton;
         private System.Windows.Forms.Button saveToXml;
+        private System.Windows.Forms.Button saveToDb;
     }
 }
 

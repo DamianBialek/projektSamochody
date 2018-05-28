@@ -23,12 +23,12 @@ namespace projektSamochody
         {
             InitializeComponent();
 
-            this.samochody.SetAutoScrollMargin(20,20);
+            this.samochody.SetAutoScrollMargin(20, 20);
 
             MenuForm startMenu = new MenuForm();
             startMenu.ShowDialog();
 
-            if(startMenu.DialogResult != DialogResult.OK)
+            if (startMenu.DialogResult != DialogResult.OK)
                 Environment.Exit(0);
 
             try
@@ -45,6 +45,10 @@ namespace projektSamochody
                         listaSamochodow = XmlCarFile.readFile();
                         this.zaladujListeSamochodow();
                         break;
+                    case "readDatabase":
+                        listaSamochodow = this.zaladujListeSamochodowZBazyDanych();
+                        this.zaladujListeSamochodow();
+                        break;
                     default:
                         break;
                 }
@@ -55,6 +59,34 @@ namespace projektSamochody
                 MessageBox.Show(ex.Message, "Błąd aplikacji !");
                 Environment.Exit(0);
             }
+        }
+
+        public List<Samochod> zaladujListeSamochodowZBazyDanych()
+        {
+            DataSet data = DB.pobierzWszystkieRekordy(Samochod.tableName);
+            DataTable tabela = data.Tables[0];
+
+            List<Samochod> listaSamochodow = new List<Samochod>();
+
+            foreach (DataRow wiersz in tabela.Rows)
+            {
+                Samochod nowySamochod = new Samochod(
+                    (string)wiersz["samochody_marka"],
+                    (string)wiersz["samochody_model"],
+                    (int)wiersz["samochody_rocznik"],
+                    (int)wiersz["samochody_predkosc"],
+                    float.Parse(wiersz["samochody_iloscPaliwaWBaku"].ToString()),
+                    (bool)(wiersz["samochody_silnikWlaczony"]),
+                    float.Parse(wiersz["samochody_pojemnoscBaku"].ToString()),
+                    float.Parse(wiersz["samochody_srednieSpalanie"].ToString()),
+                    (int)wiersz["samochody_predkoscMaksymalna"]
+                );
+
+                listaSamochodow.Add(nowySamochod);
+            }
+
+            return listaSamochodow;
+
         }
 
         public void zaladujListeSamochodow()
@@ -160,6 +192,11 @@ namespace projektSamochody
         private void saveToXml_Click(object sender, EventArgs e)
         {
             XmlCarFile.saveToFile(listaSamochodow);
+        }
+
+        private void saveToDb_Click(object sender, EventArgs e)
+        {
+            DB.wstawDane(Samochod.tableName, listaSamochodow);
         }
     }
 }

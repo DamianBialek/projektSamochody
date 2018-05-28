@@ -38,5 +38,24 @@ namespace projektSamochody.Classes
             return lista;
         }
 
+        public static void pobierzSciezkeDoPliku(string type = "read")
+        {
+            string fileName = String.Empty;
+            if (String.Equals(type, "read"))
+            {
+                OpenFileDialog fileBrowser = new OpenFileDialog();
+                fileBrowser.ShowDialog();
+                fileName = fileBrowser.FileName;
+            }
+            else if (String.Equals(type, "write"))
+            {
+                SaveFileDialog fileBrowser = new SaveFileDialog();
+                fileBrowser.ShowDialog();
+                fileName = fileBrowser.FileName;
+            }
+
+            Console.WriteLine(fileName);
+        }
+
     }
 }

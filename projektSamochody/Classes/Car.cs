@@ -23,12 +23,14 @@ namespace projektSamochody.Classes
         //bool silnikWlaczony;
         //int predkoscMaksymalna;
 
+        public static string tableName = "projektSamochody.dbo.samochody";
+
         bool koniecOperacji = true;
 
-        public string marka{ get; set; }
-        public string model{ get; set; }
-        public int rocznik{ get; set; }
-        public int predkosc{ get; set; }
+        public string marka { get; set; }
+        public string model { get; set; }
+        public int rocznik { get; set; }
+        public int predkosc { get; set; }
         public float iloscPaliwaWBaku { get; set; }
         public float pojemnoscBaku { get; set; }
         public float srednieSpalanie { get; set; }
@@ -80,7 +82,7 @@ namespace projektSamochody.Classes
 
         public bool przyspiesz(int oIle)
         {
-            if(oIle > 0 && this.predkosc < predkoscMaksymalna)
+            if (oIle > 0 && this.predkosc < predkoscMaksymalna)
             {
                 int start = this.predkosc;
                 int stop = (this.predkosc + oIle <= predkoscMaksymalna ? this.predkosc + oIle : predkoscMaksymalna);

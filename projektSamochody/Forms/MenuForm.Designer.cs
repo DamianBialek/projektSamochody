@@ -33,6 +33,7 @@
             this.wczytajJsonButton = new System.Windows.Forms.Button();
             this.nowyProjektButton = new System.Windows.Forms.Button();
             this.wczytajXmlButton = new System.Windows.Forms.Button();
+            this.wczytajBazaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -89,11 +90,23 @@
             this.wczytajXmlButton.UseVisualStyleBackColor = true;
             this.wczytajXmlButton.Click += new System.EventHandler(this.wczytajXmlButton_Click);
             // 
+            // wczytajBazaButton
+            // 
+            this.wczytajBazaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wczytajBazaButton.Location = new System.Drawing.Point(110, 316);
+            this.wczytajBazaButton.Name = "wczytajBazaButton";
+            this.wczytajBazaButton.Size = new System.Drawing.Size(187, 51);
+            this.wczytajBazaButton.TabIndex = 7;
+            this.wczytajBazaButton.Text = "Wczytaj samochody z bazy danych";
+            this.wczytajBazaButton.UseVisualStyleBackColor = true;
+            this.wczytajBazaButton.Click += new System.EventHandler(this.wczytajBazaButton_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 347);
+            this.ClientSize = new System.Drawing.Size(443, 450);
+            this.Controls.Add(this.wczytajBazaButton);
             this.Controls.Add(this.wczytajXmlButton);
             this.Controls.Add(this.nowyProjektButton);
             this.Controls.Add(this.wczytajJsonButton);
@@ -114,5 +127,6 @@
         private System.Windows.Forms.Button wczytajJsonButton;
         private System.Windows.Forms.Button nowyProjektButton;
         private System.Windows.Forms.Button wczytajXmlButton;
+        private System.Windows.Forms.Button wczytajBazaButton;
     }
 }
