@@ -29,88 +29,134 @@
         private void InitializeComponent()
         {
             this.samochody = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.saveToJson = new System.Windows.Forms.Button();
-            this.utworzTestowySamochodButton = new System.Windows.Forms.Button();
-            this.saveToXml = new System.Windows.Forms.Button();
-            this.saveToDb = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utwórzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nowySamochódToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testowySamochódToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jakoJsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jakoJsonToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.jakoPlikXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doBazyDanychToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // samochody
             // 
-            this.samochody.AutoSize = true;
-            this.samochody.Location = new System.Drawing.Point(0, 0);
+            this.samochody.AutoScroll = true;
+            this.samochody.Location = new System.Drawing.Point(0, 27);
             this.samochody.Name = "samochody";
-            this.samochody.Size = new System.Drawing.Size(778, 528);
+            this.samochody.Size = new System.Drawing.Size(960, 430);
             this.samochody.TabIndex = 2;
             // 
-            // button1
+            // menuStrip1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(1114, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Utwórz nowy samochód";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zapiszToolStripMenuItem,
+            this.pomocToolStripMenuItem,
+            this.autorToolStripMenuItem});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // saveToJson
+            // zapiszToolStripMenuItem
             // 
-            this.saveToJson.Location = new System.Drawing.Point(1148, 71);
-            this.saveToJson.Name = "saveToJson";
-            this.saveToJson.Size = new System.Drawing.Size(131, 53);
-            this.saveToJson.TabIndex = 4;
-            this.saveToJson.Text = "Zapisz samochody do pliku w formacie JSON";
-            this.saveToJson.UseVisualStyleBackColor = true;
-            this.saveToJson.Click += new System.EventHandler(this.saveToJson_Click);
+            this.zapiszToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.utwórzToolStripMenuItem,
+            this.jakoJsonToolStripMenuItem});
+            this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
+            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.zapiszToolStripMenuItem.Text = "Projekt";
             // 
-            // utworzTestowySamochodButton
+            // utwórzToolStripMenuItem
             // 
-            this.utworzTestowySamochodButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.utworzTestowySamochodButton.Location = new System.Drawing.Point(1114, 472);
-            this.utworzTestowySamochodButton.Name = "utworzTestowySamochodButton";
-            this.utworzTestowySamochodButton.Size = new System.Drawing.Size(185, 39);
-            this.utworzTestowySamochodButton.TabIndex = 5;
-            this.utworzTestowySamochodButton.Text = "Utworz testowy samochod";
-            this.utworzTestowySamochodButton.UseVisualStyleBackColor = true;
-            this.utworzTestowySamochodButton.Click += new System.EventHandler(this.utworzTestowySamochodButton_Click);
+            this.utwórzToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nowySamochódToolStripMenuItem,
+            this.testowySamochódToolStripMenuItem});
+            this.utwórzToolStripMenuItem.Name = "utwórzToolStripMenuItem";
+            this.utwórzToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.utwórzToolStripMenuItem.Text = "Utwórz";
             // 
-            // saveToXml
+            // nowySamochódToolStripMenuItem
             // 
-            this.saveToXml.Location = new System.Drawing.Point(1148, 148);
-            this.saveToXml.Name = "saveToXml";
-            this.saveToXml.Size = new System.Drawing.Size(131, 53);
-            this.saveToXml.TabIndex = 6;
-            this.saveToXml.Text = "Zapisz samochody do pliku w formacie XML";
-            this.saveToXml.UseVisualStyleBackColor = true;
-            this.saveToXml.Click += new System.EventHandler(this.saveToXml_Click);
+            this.nowySamochódToolStripMenuItem.Name = "nowySamochódToolStripMenuItem";
+            this.nowySamochódToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.nowySamochódToolStripMenuItem.Text = "Nowy samochód";
+            this.nowySamochódToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
-            // saveToDb
+            // testowySamochódToolStripMenuItem
             // 
-            this.saveToDb.Location = new System.Drawing.Point(1148, 236);
-            this.saveToDb.Name = "saveToDb";
-            this.saveToDb.Size = new System.Drawing.Size(131, 53);
-            this.saveToDb.TabIndex = 7;
-            this.saveToDb.Text = "Zapisz samochody do bazy danych";
-            this.saveToDb.UseVisualStyleBackColor = true;
-            this.saveToDb.Click += new System.EventHandler(this.saveToDb_Click);
+            this.testowySamochódToolStripMenuItem.Name = "testowySamochódToolStripMenuItem";
+            this.testowySamochódToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.testowySamochódToolStripMenuItem.Text = "Testowy samochód";
+            this.testowySamochódToolStripMenuItem.Click += new System.EventHandler(this.utworzTestowySamochodButton_Click);
+            // 
+            // jakoJsonToolStripMenuItem
+            // 
+            this.jakoJsonToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jakoJsonToolStripMenuItem1,
+            this.jakoPlikXMLToolStripMenuItem,
+            this.doBazyDanychToolStripMenuItem});
+            this.jakoJsonToolStripMenuItem.Name = "jakoJsonToolStripMenuItem";
+            this.jakoJsonToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.jakoJsonToolStripMenuItem.Text = "Zapisz";
+            // 
+            // jakoJsonToolStripMenuItem1
+            // 
+            this.jakoJsonToolStripMenuItem1.Name = "jakoJsonToolStripMenuItem1";
+            this.jakoJsonToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.jakoJsonToolStripMenuItem1.Text = "Jako plik JSON";
+            this.jakoJsonToolStripMenuItem1.Click += new System.EventHandler(this.saveToJson_Click);
+            // 
+            // jakoPlikXMLToolStripMenuItem
+            // 
+            this.jakoPlikXMLToolStripMenuItem.Name = "jakoPlikXMLToolStripMenuItem";
+            this.jakoPlikXMLToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.jakoPlikXMLToolStripMenuItem.Text = "Jako plik XML";
+            this.jakoPlikXMLToolStripMenuItem.Click += new System.EventHandler(this.saveToXml_Click);
+            // 
+            // doBazyDanychToolStripMenuItem
+            // 
+            this.doBazyDanychToolStripMenuItem.Name = "doBazyDanychToolStripMenuItem";
+            this.doBazyDanychToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.doBazyDanychToolStripMenuItem.Text = "Do bazy danych";
+            this.doBazyDanychToolStripMenuItem.Click += new System.EventHandler(this.saveToDb_Click);
+            // 
+            // pomocToolStripMenuItem
+            // 
+            this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
+            this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.pomocToolStripMenuItem.Text = "Pomoc";
+            // 
+            // autorToolStripMenuItem
+            // 
+            this.autorToolStripMenuItem.Name = "autorToolStripMenuItem";
+            this.autorToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.autorToolStripMenuItem.Text = "Autor";
+            this.autorToolStripMenuItem.Click += new System.EventHandler(this.autorToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1322, 636);
-            this.Controls.Add(this.saveToDb);
-            this.Controls.Add(this.saveToXml);
-            this.Controls.Add(this.utworzTestowySamochodButton);
-            this.Controls.Add(this.saveToJson);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(984, 477);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.samochody);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Twoje samochody";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,11 +164,17 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel samochody;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button saveToJson;
-        private System.Windows.Forms.Button utworzTestowySamochodButton;
-        private System.Windows.Forms.Button saveToXml;
-        private System.Windows.Forms.Button saveToDb;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem zapiszToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jakoJsonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jakoJsonToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem jakoPlikXMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem doBazyDanychToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem utwórzToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nowySamochódToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testowySamochódToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autorToolStripMenuItem;
     }
 }
 

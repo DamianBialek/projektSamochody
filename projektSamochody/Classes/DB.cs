@@ -52,9 +52,6 @@ namespace projektSamochody.Classes
                     insertCommand.Parameters.Add(new SqlParameter("srednieSpalanie", samochod.pobierzSrednieSpalanie()));
                     insertCommand.Parameters.Add(new SqlParameter("silnikWlaczony", samochod.pobierzStanSilnika()));
                     insertCommand.Parameters.Add(new SqlParameter("predkoscMaksymalna", samochod.pobierzPredkoscMaksymalna()));
-
-                    Console.WriteLine("Commands executed! Total rows affected are " + insertCommand.ExecuteNonQuery());
-
                 }
             }
         }

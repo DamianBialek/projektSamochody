@@ -48,3 +48,4 @@ C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamoch
 C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.ThreadForm.resources
 C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.UserControls.ControlSamochod.resources
 C:\Users\admin\Desktop\projektSamochody\projektSamochody\obj\Debug\projektSamochody.csproj.GenerateResource.Cache
+C:\Users\Damian\source\repos\projektSamochody\projektSamochody\obj\Debug\projektSamochody.Resource1.resources

@@ -179,6 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(433, 399);
             this.Controls.Add(this.utworzButton);
             this.Controls.Add(this.iloscPaliwaWBakuTextBox);
@@ -196,6 +197,7 @@
             this.Controls.Add(this.modelLabel);
             this.Controls.Add(this.markaLabel);
             this.Name = "NowySamochod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tworzenie nowego samochodu";
             this.ResumeLayout(false);
             this.PerformLayout();

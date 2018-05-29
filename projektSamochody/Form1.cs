@@ -23,7 +23,7 @@ namespace projektSamochody
         {
             InitializeComponent();
 
-            this.samochody.SetAutoScrollMargin(20, 20);
+            //this.samochody.SetAutoScrollMargin(20, 20);
 
             MenuForm startMenu = new MenuForm();
             startMenu.ShowDialog();
@@ -134,9 +134,12 @@ namespace projektSamochody
         {
             Button removeButton = new Button();
             removeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            removeButton.Size = new System.Drawing.Size(196, 40);
+            //removeButton.Size = new System.Drawing.Size(196, 40);
+            removeButton.Size = new System.Drawing.Size(44, 44);
             removeButton.Name = "removeSamochod" + kotrolkaSamochoduName;
-            removeButton.Text = "Usuń samochód";
+            //removeButton.Text = "Usuń samochód";
+            removeButton.BackgroundImage = Properties.Resources.delete;
+            removeButton.BackgroundImageLayout = ImageLayout.Zoom;
             removeButton.Click += new System.EventHandler(this.removeButton_Click);
 
             return removeButton;
@@ -165,18 +168,7 @@ namespace projektSamochody
         private void threadButton(object sender, EventArgs e)
         {
             form = new ThreadForm();
-            form.delMetoda += this.przypiszTextBox;
             form.ShowDialog();
-        }
-
-        private void przypiszTextBox(int i)
-        {
-            //this.textBox1.Text = i.ToString();
-        }
-
-        private void saveToJson_Click(object sender, EventArgs e)
-        {
-            JsonFile.writeToFile(listaSamochodow);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -189,6 +181,13 @@ namespace projektSamochody
             this.utworzNowyTestowySamochod();
         }
 
+        #region Opcje zapisu samochodow
+
+        private void saveToJson_Click(object sender, EventArgs e)
+        {
+            JsonFile.writeToFile(listaSamochodow);
+        }
+
         private void saveToXml_Click(object sender, EventArgs e)
         {
             XmlCarFile.saveToFile(listaSamochodow);
@@ -197,6 +196,13 @@ namespace projektSamochody
         private void saveToDb_Click(object sender, EventArgs e)
         {
             DB.wstawDane(Samochod.tableName, listaSamochodow);
+        }
+
+        #endregion
+
+        private void autorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Damian Białek \r\ndamianbiaek1997@hotmail.com \r\n", "Autor");
         }
     }
 }
